@@ -1,6 +1,6 @@
 package bolt;
 
-import java.util.Date;
+import java.util.*;
 
 public class Tej {
 	private int urtartalom;
@@ -18,7 +18,8 @@ public class Tej {
 	}
 	
 	public boolean joMeg() {
-		return false;
+        Date today = new Date();
+        return today.before(szavatossagiIdo);
 	}
 	
 	public int getUrtartalom(){
@@ -41,5 +42,10 @@ public class Tej {
 	
 	public long getAr(){
 		return ar;
+		
+	}
+	
+	public String toString() {
+		return "" + getGyarto() + getUrtartalom() + getSzavatossagiIdo() + getZsirtartalom();
 	}
 }
