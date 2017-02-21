@@ -2,7 +2,7 @@ package bolt;
 
 import java.util.*;
 
-public class Tej {
+public abstract class Tej {
 	private final int LITER = 4;
 	private final int FELLITER = 2;
 	private final int POHAR = 1;
