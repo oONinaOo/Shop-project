@@ -6,7 +6,10 @@ import bolt.Tej;
 
 public class FeltartosTej extends Tej {
 	
-	public FeltartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatosagiIdo, double zsirtartalom){
+	private long ar;
+
+	public FeltartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatosagiIdo, double zsirtartalom, long ar){
 		super(vonalKod, urtartalom, gyarto, szavatosagiIdo, zsirtartalom);
+		this.ar = ar;
 		}
 }
