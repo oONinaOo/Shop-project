@@ -2,7 +2,7 @@ package bolt;
 
 import java.util.Date;
 
-public class Sajt {
+public class Sajt extends Elelmiszer {
 	private double suly;
 	private double zsirtartalom;
 	private Long vonalKod;
@@ -10,9 +10,7 @@ public class Sajt {
 	private Date szavatossagiIdo;
 	
 	public Sajt(Long vonalKod, String gyarto, Date szavatossagiIdo, double zsirtartalom){
-		this.vonalKod = vonalKod;
-		this.gyarto = gyarto;
-		this.szavatossagiIdo = szavatossagiIdo;
+		super(vonalKod, gyarto, szavatossagiIdo);
 		this.zsirtartalom = zsirtartalom;
 	}
 	
@@ -37,7 +35,7 @@ public class Sajt {
 		return szavatossagiIdo;
 	}
 	
-	public Long getVonalKod() {
+	public long getVonalKod() {
 		return vonalKod;
 	}
 	
