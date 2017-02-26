@@ -1,6 +1,6 @@
 package bolt;
 
-public class TulSokLevonasKivetel extends Exception {
+public class TulSokLevonasKivetel extends Boltkivetel {
 	public TulSokLevonasKivetel(String message) {
 		
 	}
