@@ -14,13 +14,37 @@ import bolt.aruk.tej.TartosTej;
 
 public abstract class BoltFactory {
 
-		public Tej ujTartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatosagiIdo, double zsirtartalom, long ar){
-			return new TartosTej(vonalKod, urtartalom, gyarto, szavatosagiIdo, zsirtartalom, ar);
+		public Tej ujFelzsirosTartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatosagiIdo, double zsirtartalom, long ar){
+			return new TartosTej(vonalKod, urtartalom, gyarto, szavatosagiIdo, Tej.FELZSIROS);
 		}
 		
-		public Tej ujFeltartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatosagiIdo, double zsirtartalom, long ar){
-			return new FeltartosTej(vonalKod, urtartalom, gyarto, szavatosagiIdo, zsirtartalom, ar);
+		public Tej ujZsirosTartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatosagiIdo, double zsirtartalom, long ar){
+			return new TartosTej(vonalKod, urtartalom, gyarto, szavatosagiIdo, Tej.ZSIROS);
 		}
+		
+		public Tej ujFelzsirosFeltartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatosagiIdo, double zsirtartalom, long ar){
+			return new FeltartosTej(vonalKod, urtartalom, gyarto, szavatosagiIdo, Tej.FELZSIROS);
+		}
+		
+		public Tej ujZsirosFeltartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatosagiIdo, double zsirtartalom, long ar){
+			return new FeltartosTej(vonalKod, urtartalom, gyarto, szavatosagiIdo, Tej.ZSIROS);
+		}
+		
+		public Tej ujFelzsirosLiteresTartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatosagiIdo, double zsirtartalom, long ar){
+			return new TartosTej(vonalKod, Tej.LITER, gyarto, szavatosagiIdo, Tej.FELZSIROS);
+		}
+		
+		public Tej ujZsirosLiteresTartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatosagiIdo, double zsirtartalom, long ar){
+			return new TartosTej(vonalKod, Tej.LITER, gyarto, szavatosagiIdo, Tej.ZSIROS);
+		}
+		
+		public Tej ujFelzsirosLiteresFeltartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatosagiIdo, double zsirtartalom, long ar){
+			return new FeltartosTej(vonalKod, Tej.LITER, gyarto, szavatosagiIdo, Tej.FELZSIROS);
+		}
+		
+		public Tej ujZsirosLiteresFeltartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatosagiIdo, double zsirtartalom, long ar){
+			return new FeltartosTej(vonalKod, Tej.LITER, gyarto, szavatosagiIdo, Tej.ZSIROS);
+		}		
 		
 		public Sajt ujSajt(double suly, double zsirtartalom, Long vonalKod, String gyarto, Date szavatossagiIdo){
 			return new Sajt(suly, zsirtartalom, vonalKod, gyarto, szavatossagiIdo);
