@@ -2,8 +2,9 @@ package bolt;
 
 import java.util.Date;
 
-import Tej.FeltartosTej;
-import Tej.TartosTej;
+import bolt.aruk.Tej;
+import bolt.aruk.tej.FeltartosTej;
+import bolt.aruk.tej.TartosTej;
 
 public abstract class TejFactory {
 

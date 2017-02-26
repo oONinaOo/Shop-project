@@ -3,6 +3,10 @@ package bolt;
 import java.util.Hashtable;
 import java.util.Map;
 
+import bolt.aruk.Elelmiszer;
+import bolt.aruk.Sajt;
+import bolt.aruk.Tej;
+
 public class Bolt {
 
 	private String nev;
